@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ sitename }}: {{ subtitle }}</title>
+    <link href="/compiled/css/app.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <section class="container-fluid">
+
+      <header class="row rounded">
+
+        <h1 class="col-12"><a class="d-block" title="{{ sitename }}" href="/">{{ sitename }}</a></h1>
+        <h2 class="col-12 m-0">{{ subtitle }}</h2>
+
+        <nav class="navbar navbar-darkX navbar-expand-sm p-0 px-2">
+
+          <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  1st level
+                </a>
+                <div class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown">
+                  <a class="nav-link" href="#">2nd level A</a>
+                  <a class="nav-link" href="#">2nd level B</a>
+                  <a class="nav-link" href="#">2nd level C</a>
+                  <!--<div class="dropdown-divider"></div>-->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </header>
+
+      <div class="row">
+        <article class="col-12">
+          {{{output}}}
+        </article>
+      </div>
+      <footer class="container-fluid">
+
+      </footer>
+    </section>
+
+    <script>
+      // Asynchronous JavaScript loader thanks to Google
+      function loadScript(src, callback) {
+        let d = document;
+        let n = d.createElement('script');
+        let s = d.getElementsByTagName('script')[0];
+        n.type = 'text/javascript'; n.async = 1; n.src = src;
+        if (typeof(callback) !== 'undefined') {
+          n.onload = n.onreadystatechange = function() {
+            if ( ! this.readyState || (this.readyState === 'complete')) callback();
+          };
+        }
+        s.parentNode.insertBefore(n, s.nextSibling);
+      }
+      loadScript('/compiled/js/app.min.js');
+    </script>
+  </body>
+</html>

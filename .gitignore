@@ -1,0 +1,8 @@
+*~
+.DS_Store
+.idea
+.history
+package-lock.json
+node_modules
+config.js
+www/compiled
